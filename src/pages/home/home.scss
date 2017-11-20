@@ -1,3 +1,11 @@
-page-home {
-
+page-login {
+    .center {
+        text-align: center;
+    }
+    ion-grid {
+        margin-top: calc((100vh / 2) - 100px);
+    }
+    .scroll-content {
+        background-color: lightyellow;
+    }
 }

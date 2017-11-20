@@ -1,17 +1,33 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Home</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+    <h2>Ionic Facebook and Google Login</h2>
+    <p>
+        Logged with {{loginType}}
+    </p>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-1></ion-col>
+            <ion-col col-12 class="center">
+                <img [src]="user?.picture" class="pic-profile" />
+            </ion-col>
+            <ion-col col-1></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12>
+                <p>{{user?.name}} </p>
+                <p>{{user?.email}} </p>
+                <p>{{user?.gender}} </p>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12 class="center">
+                <button ion-button color="dark" (click)="logout()">Logout</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>
